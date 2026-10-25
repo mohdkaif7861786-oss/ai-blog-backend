@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0d17" />
+    <meta name="description" content="Lumina — a thoughtful, AI-aware publishing space." />
+    <title>Lumina — Ideas that travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="noise"></div>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Lumina home"><span class="brand-mark"><i></i><i></i><i></i></span><span>Lumina</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="#discover">Discover</a>
+        <a href="#for-you">For you</a>
+        <a href="#categories">Topics</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button search-button" type="button" aria-label="Search" data-action="toggle-search"></button>
+        <button class="write-button" type="button" data-action="open-editor"><span class="pen-icon"></span>Write a story</button>
+        <button class="avatar-button" type="button" aria-label="Sign in" data-action="open-auth"><span>?</span></button>
+      </div>
+    </header>
+
+    <div class="search-panel" id="search-panel" hidden>
+      <div class="search-inner">
+        <span class="search-icon"></span>
+        <input id="search-input" type="search" placeholder="Search stories, themes, or writers" autocomplete="off" />
+        <kbd>ESC</kbd>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero" id="discover">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="pulse"></span>THE THOUGHTFUL INTERNET</p>
+          <h1>Ideas worth<br /><em>lingering</em> on.</h1>
+          <p class="hero-text">A slower, smarter place for stories that change how you see the world. Curated with care, powered by thoughtful intelligence.</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#latest">Start exploring <span>→</span></a>
+            <button class="text-action" type="button" data-action="open-auth">Join Lumina <span>↗</span></button>
+          </div>
+          <div class="reader-row"><div class="reader-avatars"><span class="face face-one">A</span><span class="face face-two">J</span><span class="face face-three">M</span><span class="face face-four">S</span></div><p>Join <strong>14,000+</strong> curious minds</p></div>
+        </div>
+        <div class="hero-art reveal delay-one" aria-label="Abstract illustration">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orb orb-large"></div><div class="orb orb-small"></div>
+          <div class="hero-card card-main"><span class="mini-label">FEATURED ESSAY</span><strong>Make room for<br />beautiful questions.</strong><div><span class="mini-avatar">L</span><small>4 min read</small></div></div>
+          <div class="hero-card card-floating"><span class="sparkle">✦</span><p>Every idea starts as a small signal.</p></div>
+          <div class="scribble">explore<br />the <em>unseen</em> →</div>
+          <div class="grid-lines"></div>
+        </div>
+      </section>
+
+      <section class="metrics reveal" aria-label="Community statistics">
+        <div><strong>12.4k</strong><span>stories shared</span></div><div><strong>840</strong><span>active writers</span></div><div><strong>38</strong><span>fresh perspectives daily</span></div><p>Thoughts that stay with you,<br />from people who care.</p>
+      </section>
+
+      <section class="topic-section reveal" id="categories">
+        <div class="section-heading"><div><p class="eyebrow">FIND YOUR THREAD</p><h2>What’s calling you?</h2></div><button class="scroll-control" type="button" data-action="scroll-topics" aria-label="See more topics">→</button></div>
+        <div class="topic-scroller" id="topic-list"></div>
+      </section>
+
+      <section class="feed-section" id="latest">
+        <div class="feed-heading reveal"><div><p class="eyebrow">THE EDIT</p><h2>Fresh from the<br /><em>collective</em></h2></div><div class="feed-controls"><button class="filter-button active" type="button" data-filter="all">All stories</button><button class="filter-button" type="button" data-filter="popular">Most loved</button><button class="filter-button" type="button" data-filter="recent">Just published</button></div></div>
+        <div class="story-grid" id="story-grid" aria-live="polite"><div class="loading-state"><span></span>Collecting good ideas…</div></div>
+        <div class="center-action reveal"><button class="outline-action" type="button" data-action="load-more">Discover more stories <span>↓</span></button></div>
+      </section>
+
+      <section class="personal-section reveal" id="for-you">
+        <div class="personal-intro"><p class="eyebrow"><span class="star">✦</span>CURATED FOR YOU</p><h2>Keep following<br />the <em>spark.</em></h2><p>Sign in and Lumina will learn from the ideas you linger over—then gently point you toward your next one.</p><button class="light-action" type="button" data-action="open-auth">Make it personal <span>→</span></button></div>
+        <div class="recommendation-stack" id="recommendations"><div class="recommendation-placeholder">Your reading constellation<br />is waiting to form. <span>✦</span></div></div>
+      </section>
+
+      <section class="newsletter reveal"><div class="newsletter-flare"></div><p class="eyebrow">A NOTE FOR THE CURIOUS</p><h2>Good ideas,<br /><em>once a week.</em></h2><p>No noise. Just a small, handpicked collection of stories to open when you have a quiet moment.</p><form id="newsletter-form"><input type="email" required placeholder="your@email.com" aria-label="Email address" /><button type="submit">Subscribe <span>→</span></button></form><small>By subscribing, you’re choosing a little more wonder in your inbox.</small></section>
+    </main>
+
+    <footer><a class="brand" href="#top"><span class="brand-mark"><i></i><i></i><i></i></span><span>Lumina</span></a><p>Where curious minds come to think out loud.</p><div><a href="#discover">Discover</a><a href="#categories">Topics</a><button type="button" data-action="open-editor">Write</button></div><small>© 2026 Lumina. Made for the curious.</small></footer>
+
+    <div class="modal" id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title" hidden><div class="modal-backdrop" data-action="close-modal"></div><div class="modal-card auth-card"><button class="close-button" type="button" data-action="close-modal" aria-label="Close">×</button><div class="modal-logo"><span class="brand-mark"><i></i><i></i><i></i></span></div><p class="eyebrow" id="auth-kicker">WELCOME IN</p><h2 id="auth-title">Find your next<br /><em>favourite idea.</em></h2><p class="auth-subtitle" id="auth-subtitle">Sign in to save stories, join conversations, and make your feed yours.</p><form id="auth-form"><div class="field name-field" hidden><label for="auth-name">Your name</label><input id="auth-name" type="text" placeholder="Ada Lovelace" /></div><div class="field"><label for="auth-email">Email address</label><input id="auth-email" type="email" placeholder="you@example.com" required /></div><div class="field"><label for="auth-password">Password</label><input id="auth-password" type="password" placeholder="••••••••" required minlength="6" /></div><p class="form-message" id="auth-message"></p><button class="submit-button" type="submit" id="auth-submit">Sign in <span>→</span></button></form><p class="switch-copy" id="auth-switch-copy">New around here? <button type="button" data-action="toggle-auth">Create an account</button></p></div></div>
+
+    <div class="modal" id="editor-modal" role="dialog" aria-modal="true" aria-labelledby="editor-title" hidden><div class="modal-backdrop" data-action="close-modal"></div><div class="modal-card editor-card"><div class="editor-top"><div><p class="eyebrow">NEW STORY</p><h2 id="editor-title">Put something<br /><em>beautiful</em> into words.</h2></div><button class="close-button" type="button" data-action="close-modal" aria-label="Close">×</button></div><form id="editor-form"><div class="editor-field"><label for="story-title">A title with a pulse</label><input id="story-title" required maxlength="180" placeholder="What have you been thinking about?" /></div><div class="editor-meta"><div><label for="story-category">Choose a thread</label><select id="story-category"><option value="">No category</option></select></div><span class="draft-status"><i></i>AI insights on publish</span></div><div class="editor-field"><label for="story-content">Tell the story</label><textarea id="story-content" required minlength="20" placeholder="Start where the feeling is strongest…"></textarea><div class="word-count"><span id="word-count">0 words</span><span>AI will create a summary, tags &amp; a quality check</span></div></div><p class="form-message" id="editor-message"></p><div class="editor-bottom"><p>Publishing means sharing your perspective with a thoughtful community.</p><button class="submit-button" type="submit">Publish story <span>↗</span></button></div></form></div></div>
+
+    <div class="modal" id="story-modal" role="dialog" aria-modal="true" aria-labelledby="story-title-modal" hidden><div class="modal-backdrop" data-action="close-modal"></div><article class="modal-card story-modal-card"><button class="close-button story-close" type="button" data-action="close-modal" aria-label="Close">×</button><div id="story-detail"></div></article></div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>
